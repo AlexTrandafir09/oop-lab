@@ -1,0 +1,95 @@
+class avion{
+    char* nume_avion;
+    char* companie_detinatoare;
+    int lungime_avion;
+    unsigned distanta_maxima;
+    unsigned an_fabricatie;
+public:
+    avion(){
+        nume_avion=new char[0];
+        companie_detinatoare=new char[0];
+        lungime_avion=0;
+        distanta_maxima=0;
+        an_fabricatie=0;
+    }
+    avion(const char *nume_avion_,const char *companie_detinatoare_,const int lungime_avion_,
+          const int distanta_maxima_,const int an_fabricatie_){
+        nume_avion=new char[strlen(nume_avion_)+1];
+        companie_detinatoare=new char[strlen(companie_detinatoare_)+1];
+        lungime_avion=lungime_avion_;
+        distanta_maxima=distanta_maxima_;
+        an_fabricatie=an_fabricatie_;
+        strcpy(nume_avion,nume_avion_);
+        strcpy(companie_detinatoare,companie_detinatoare_);
+    }
+    avion(const avion& copie_avion){
+        nume_avion=new char[strlen(copie_avion.nume_avion)+1];
+        companie_detinatoare=new char[strlen(copie_avion.companie_detinatoare)+1];
+        lungime_avion=copie_avion.lungime_avion;
+        distanta_maxima=copie_avion.distanta_maxima;
+        an_fabricatie=copie_avion.an_fabricatie;
+        strcpy(companie_detinatoare, copie_avion.companie_detinatoare);
+        strcpy(nume_avion, copie_avion.nume_avion);
+    }
+    char* getNumeAvion(){
+        return nume_avion;
+    }
+    char* getCompanieDetinatoare(){
+        return companie_detinatoare;
+    }
+    int getLungimeAvion()const{
+        return lungime_avion;
+    }
+    int getDistantaMaxima()const{
+        return distanta_maxima;
+    }
+    int getAnFabricatie()const{
+        return an_fabricatie;
+    }
+
+    void setNumeAvion(const char* nume_avion_){
+        delete[] nume_avion;
+        nume_avion=new char[strlen(nume_avion_)+1];
+        strcpy(nume_avion,nume_avion_);
+    }
+    void setCompanieDetinatoare(const char* companie_detinatoare_){
+        delete[] companie_detinatoare;
+        companie_detinatoare=new char[strlen(companie_detinatoare_)+1];
+        strcpy(companie_detinatoare,companie_detinatoare_);
+    }
+    void setAnFabricatie(const int an_fabricatie_){
+        an_fabricatie=an_fabricatie_;
+    }
+    void setLungimeAvion(const int lungime_avion_){
+        lungime_avion=lungime_avion_;
+    }
+    void setDistantaMaxima(const int distanta_maxima_){
+        distanta_maxima=distanta_maxima_;
+    }
+    bool operator==(const avion &rhs)const{
+        return strcmp(nume_avion,rhs.nume_avion)==0 and strcmp(companie_detinatoare,rhs.companie_detinatoare)==0
+        and lungime_avion==rhs.lungime_avion and distanta_maxima==rhs.distanta_maxima and an_fabricatie==
+        rhs.an_fabricatie;
+    }
+    bool operator!=(const avion &rhs)const{
+        return strcmp(nume_avion,rhs.nume_avion)!=0 and strcmp(companie_detinatoare,rhs.companie_detinatoare)!=0
+               and lungime_avion!=rhs.lungime_avion and distanta_maxima!=rhs.distanta_maxima and
+               an_fabricatie!=rhs.an_fabricatie;
+    }
+    avion& operator=(const avion& rhs)
+    {
+        setNumeAvion(rhs.nume_avion);
+        setAnFabricatie(rhs.an_fabricatie);
+        setCompanieDetinatoare(rhs.companie_detinatoare);
+        setDistantaMaxima(rhs.distanta_maxima);
+        setLungimeAvion(rhs.lungime_avion);
+
+        return *this;
+    }
+    ~avion(){
+        delete[] nume_avion;
+        delete[] companie_detinatoare;
+
+    }
+
+};
