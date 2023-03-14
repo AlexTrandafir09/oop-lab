@@ -234,7 +234,7 @@ int main(){
     auto* v_avion=new avion[3];
     auto* v_motor=new motor[3];
 
-    v_avion[0].setNumeAvion("boeing 737-800");
+    v_avion[0].setNumeAvion("BOEING 737-800");
     v_avion[0].setLungimeAvion(40);
     v_avion[0].setDistantaMaxima(5600);
     v_avion[0].setAnFabricatie(1996);
@@ -302,7 +302,7 @@ do{
                     ok = true;
 
 
-            if (ok) {
+            if (!ok) {
                 cout << "Nu exista niciun avion cu acest nume" << endl;
                 break;
             }
