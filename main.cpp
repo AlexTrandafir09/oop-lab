@@ -234,32 +234,32 @@ int main(){
     auto* v_avion=new avion[3];
     auto* v_motor=new motor[3];
 
-    v_avion[0].setNumeAvion("AVIONUL MAFIOT");
-    v_avion[0].setLungimeAvion(82.1);
-    v_avion[0].setDistantaMaxima(3422);
-    v_avion[0].setAnFabricatie(2004);
-    v_avion[0].setProducator("MAFIA SRL");
-    v_motor[0].setModelMotor("ROLLS ROYCE");
-    v_motor[0].setCombustieMotor("KEROSEN");
-    v_motor[0].setCaiPutere(12000);
+    v_avion[0].setNumeAvion("boeing 737-800");
+    v_avion[0].setLungimeAvion(40);
+    v_avion[0].setDistantaMaxima(5600);
+    v_avion[0].setAnFabricatie(1996);
+    v_avion[0].setProducator("BOEING 737 CLASSICS");
+    v_motor[0].setModelMotor("CFM International CFM56");
+    v_motor[0].setCombustieMotor("Kerosen");
+    v_motor[0].setCaiPutere(50000);
 
     v_avion[1].setNumeAvion("AIRBUS A321");
     v_avion[1].setLungimeAvion(44.51);
     v_avion[1].setDistantaMaxima(7400);
     v_avion[1].setAnFabricatie(1994);
-    v_avion[1].setProducator("AIRBUS");
-    v_motor[1].setModelMotor("HATZ JON");
-    v_motor[1].setCombustieMotor("KEROSEN");
-    v_motor[1].setCaiPutere(143270);
+    v_avion[1].setProducator("AIRBUS GROUP");
+    v_motor[1].setModelMotor("International Aero Engines V2530-A5");
+    v_motor[1].setCombustieMotor("Kerosen");
+    v_motor[1].setCaiPutere(56000);
 
-    v_avion[2].setNumeAvion("BOEING 747");
-    v_avion[2].setLungimeAvion(50.5);
-    v_avion[2].setDistantaMaxima(8240);
-    v_avion[2].setAnFabricatie(2003);
+    v_avion[2].setNumeAvion("BOEING 777");
+    v_avion[2].setLungimeAvion(63.7);
+    v_avion[2].setDistantaMaxima(9420);
+    v_avion[2].setAnFabricatie(1994);
     v_avion[2].setProducator("BOEING");
-    v_motor[2].setModelMotor("MIAU MIAU");
-    v_motor[2].setCombustieMotor("ELECTRIC");
-    v_motor[2].setCaiPutere(7453);
+    v_motor[2].setModelMotor("GE90-115B");
+    v_motor[2].setCombustieMotor("Kerosen");
+    v_motor[2].setCaiPutere(175000);
 
 bool deschis=true;
 short alegere;
