@@ -1,0 +1,5 @@
+"C:\Program Files\JetBrains\CLion 2022.3.2\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=C:/Program Files/JetBrains/CLion 2022.3.2/bin/ninja/win/x64/ninja.exe" -G Ninja -S C:\Users\trand\OneDrive\Documents\GitHub\oop-lab -B C:\Users\trand\OneDrive\Documents\GitHub\oop-lab\cmake-build-debug
+Compiler: GNU version 11.2.0
+-- Configuring done
+-- Generating done
+-- Build files have been written to: C:/Users/trand/OneDrive/Documents/GitHub/oop-lab/cmake-build-debug

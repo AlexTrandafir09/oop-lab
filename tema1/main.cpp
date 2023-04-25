@@ -1,6 +1,5 @@
 #include <iostream>
 #include <cstring>
-#include <vector>
 using namespace std;
 class motor {
     char *model;
@@ -29,7 +28,7 @@ public:
         strcpy(combustie, copie_motor.combustie);
     }
 
-    [[nodiscard]] char* getModelMotor()const{
+    [[nodiscard]] const char* getModelMotor()const{
         return model;
     }
 
@@ -186,8 +185,7 @@ istream& operator>>(istream& is,motor& motor1){
     cout<<"Introdu model motor: ";
     is.getline(model,48);
     motor1.setModelMotor(model);
-    cout<<"Combustie: ";
-    is.getline(combustie,48);
+    cout<<"Combustie: ";is.getline(combustie,48);
     motor1.setCombustieMotor(combustie);
     cout<<"Cai putere: ";
     is>>cai_putere;
@@ -223,7 +221,7 @@ istream& operator>>(istream& is,avion& avion1){
 ostream& operator<<(ostream& os,avion& avion1){
     os<<"Nume avion: "<<avion1.getNumeAvion()<<endl;
     os<<"Companie detinatoare: "<<avion1.getProducator()<<endl;
-    os<<"Lungime avion(metrii): "<<avion1.getLungimeAvion()<<endl;
+    os<<"Lungime avion(m): "<<avion1.getLungimeAvion()<<endl;
     os<<"Distanta maxima pe care o poate parcurge(km): "<<avion1.getDistantaMaxima()<<endl;
     os<<"An fabricatie: "<<avion1.getAnFabricatie()<<endl;
     return os;

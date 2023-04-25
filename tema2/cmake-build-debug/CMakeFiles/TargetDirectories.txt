@@ -1,0 +1,3 @@
+C:/Users/trand/OneDrive/Documents/GitHub/oop-lab/tema2/cmake-build-debug/CMakeFiles/tema2_poo.dir
+C:/Users/trand/OneDrive/Documents/GitHub/oop-lab/tema2/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/trand/OneDrive/Documents/GitHub/oop-lab/tema2/cmake-build-debug/CMakeFiles/rebuild_cache.dir
